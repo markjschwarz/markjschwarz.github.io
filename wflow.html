@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mark's Data Analytics Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Mark's Portfolio</a></h1>
+								<span style="font-size: 35px;">
+									<a href="https://www.linkedin.com/in/markjschwarz/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+									
+									<a href="https://github.com/markjschwarz" class="icon brands fa-github"><span class="label">GitHub</span></a>
+							</span>
+							</div>
+
+						<!-- Nav -->
+						
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+								<article style="width: 900px; font-size: 18px;">
+
+									<h2>Water Flow Characteristics Calculations Program</h2>
+									
+									<br>
+									<br>
+									
+									
+					
+									<p>This program aims to determine the characteristics of water flow from a given source. Its primary objective is to calculate the available flow rate at a specified pressure, providing crucial information for the design of an irrigation system. 
+										The measurement process is straightforward and involves an instrument with a pressure gauge, along with four nozzles of varying internal diameters. </p>
+																				
+									<a href="https://github.com/markjschwarz/Water-Flow-Characteristics" class="icon brands fa-github" style="font-size: 20px;"> Github repository of this project</a>
+									<p></p>	
+									<p>
+									<b>The following steps outline the procedure: </b><br>
+										1. Connect the instrument to the water source and attach the first nozzle. <br>
+										2. Fully open the water source and record the pressure reading. <br>
+										3. Repeat the above step with the remaining three nozzles, resulting in a total of four measurements.<br>
+										4. Additionally, measure the static pressure at the water source when the flow rate is zero. <br>
+										5. Utilize the pressure data to determine the flow rate for each nozzle by referring to a calibration diagram. 
+										Draw a horizontal line at the measured pressure and note the intersection point with the respective calibration curve for the first nozzle. <br>
+										6. Repeat the above process for the remaining nozzles, as well as the static pressure. This will yield a total of five points. <br>
+										7. Finally, manually connect these points to form a curve.</p>
+									
+									<span class="image main"><img src="images/process_flow.svg" alt="" style="width: 900px"/></span>
+									
+									<p><b>To simplify and expedite this process, a Python program has been developed to automate the calculations. </b><br> 
+										The program includes the following features: <br>
+		
+										1. Digitization of the four nozzle curves: The curves are generated using polynomial regression, and all the corresponding values are stored in a lookup table. <br>
+										2. Inclusion of pipe characteristics: The program incorporates additional pipe-related parameters for further calculations.<br>
+										3. User inputs: The program allows the user to enter the desired flow rate, enabling the calculation of the available pressure. 
+										Furthermore, inputs for pipe length, type, pressure loss on the valve, and filter can also be specified. </p>
+									<p>The final output of the program presents the results in a user-friendly manner, facilitating efficient analysis and design considerations.</p>
+									<span class="image main"><img src="images/flow-res1.jpg" alt="" style="width: 654px; height: 564px;"/></span>
+									<span class="image main"><img src="images/flow-res2.jpg" alt="" style="width: 636px; height: 569px;"/></span>
+									<span class="image main"><img src="images/flow-res3.jpg" alt="" style="width: 1115px; height: 413px;"/></span>
+
+									
+
+
+									
+
+							
+
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

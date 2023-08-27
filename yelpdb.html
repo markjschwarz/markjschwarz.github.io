@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mark's Data Analytics Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Mark's Portfolio</a></h1>
+								<span style="font-size: 35px;">
+									<a href="https://www.linkedin.com/in/markjschwarz/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+									
+									<a href="https://github.com/markjschwarz" class="icon brands fa-github"><span class="label">GitHub</span></a>
+							</span>
+							</div>
+
+						<!-- Nav -->
+						
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+								<article style="width: 900px; font-size: 18px;">
+
+									<h2>Yelp Open Dataset Transformation</h2>
+									
+									<br>
+									<br>
+									
+									
+									<h3>Overview</h3>
+									<p>Yelp is an online platform and mobile app that allows users to discover and review local businesses such as restaurants, hotels, and service providers. It provides a platform for people to share their experiences, rate businesses, and write reviews. Yelp also offers features like business information, photos, menus, and user-generated content to help users make informed decisions about where to go or what services to use. The platform has a significant influence on businesses, as positive or negative reviews can impact their reputation and success.</p>
+									<p>This project is about uploading the <a href="https://www.yelp.com/dataset">Yelp Open Dataset</a> to a PostgreSQL database for analysis.</p>
+									<h3>Development Process</h3>
+									<a href="https://github.com/markjschwarz/Yelp-dataset-to-DB" class="icon brands fa-github" style="font-size: 20px;"> Github repository of this project</a>
+									
+									<span class="image main"><img src="images/process_yelpdb.svg" alt="" style="width: 900px"/></span>
+									<p>The dataset comprises 5 JSON files, totaling approximately 8.65 GBytes in size. To facilitate searching and analysis, I chose to transform the data using Python and upload it to a PostgreSQL database. However, my version does not include the Photo and Review tables due to their large size.</p>
+									<p><b>Business table </b> The Business table has been split into three tables: Business FACT table, Hours DIM table, and Category DIM table. Some businesses have multiple categories, necessitating this division. To simplify handling time formats, the Hours table has been created. Calculating daily hours can be challenging when closing times are set to 0:00 or late night hours like 01:00, resulting in negative differences. Refer to the Python code for the workaround.</p>
+									<p><b>User & Friend tables</b> The User and Friend tables remain unchanged, except for the Friends table, which is significantly large, so only a limited number of rows have been uploaded.</p>
+									<p><b>Tip table</b> The Tip table serves as a connection between the Business and User tables, containing concise reviews that are ideal for sentiment analysis.</p>
+									<p>The Python code I developed establishes a connection with the PostgreSQL DBMS, creates the necessary tables, and parses the JSON files, uploading the data row-by-row. On my computer with a locally hosted database, the upload process takes approximately 1-2 hours to complete.</p>
+									<p>Finally, the database ERD (Entity-Relationship Diagram) is depicted as follows:</p>
+									<span class="image main"><img src="images/ERD_yelpdb.jpg" alt="" style="width: 900px"/></span>
+									<p>This code gets all the table names in the database and performs a COUNT(*) on them. This is the size of the final database:</p>
+									<span class="image main"><img src="images/python_countquery.jpg" alt="" style="width: 618px; height: 653px;"/></span>
+
+
+
+									
+								
+							
+
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

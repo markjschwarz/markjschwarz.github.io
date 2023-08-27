@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mark's Data Analytics Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Mark's Portfolio</a></h1>
+								<span style="font-size: 35px;">
+									<a href="https://www.linkedin.com/in/markjschwarz/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+									
+									<a href="https://github.com/markjschwarz" class="icon brands fa-github"><span class="label">GitHub</span></a>
+							</span>
+							</div>
+
+						<!-- Nav -->
+						
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+								<article style="width: 900px; font-size: 18px;">
+
+									<h2>Developer Survey Analysis</h2>
+									<span class="image main"><img src="images/stacko.svg" alt="" style="width: 900px;"/></span>
+									<br>
+									<br>
+									
+									
+									
+									<p>Tracking data from surveys like Stack Overflow's developer survey is crucial for gaining insights into the evolving landscape of software development and the needs of developers worldwide. It provides valuable information about programming languages, tools, frameworks, and emerging trends, aiding companies and organizations in making informed decisions. By analyzing this data, we can identify skill gaps, understand job market demands, and tailor training programs or recruitment strategies accordingly. Tracking such data enables industry professionals, educators, and policymakers to stay updated with the ever-changing technology landscape, fostering innovation, and facilitating the growth of the developer community. Additionally, this data can help identify diversity and inclusion issues, promoting initiatives for a more inclusive and equitable tech industry.</p>
+									<h3>Development Process</h3>
+									<span class="image main"><img src="images/process_stacko.svg" alt="" style="width: 900px"/></span>	
+									<P><b>Data Cleaning, Analysis and Modeling:</b> I obtained the data from <a href="https://survey.stackoverflow.co/2022/">StackOwerflow's Developer Survey 2022.</a> The data is provided in .csv format which is about 80 columns and 73000+ rows.</P>
+									<p>I decided to load this into Power BI directly and perform all the cleaning, transfomation and preparation in Power Query. I kept only a few columns and I separated the data into different DIM tables. The final result is a star schema shown below.</p>
+									<span class="image main"><img src="images/datamodel_stacko.jpg" alt="" style="width: 900px"/></span>	
+									<h3>Visualization</h3>
+									<span class="image main"><img src="images/DevSurvey.jpg" alt="" style="width: 900px"/></span>
+							
+
+								
+
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

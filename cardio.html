@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mark's Data Analytics Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Mark's Portfolio</a></h1>
+								<span style="font-size: 35px;">
+									<a href="https://www.linkedin.com/in/markjschwarz/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+									
+									<a href="https://github.com/markjschwarz" class="icon brands fa-github"><span class="label">GitHub</span></a>
+							</span>
+							</div>
+
+						<!-- Nav -->
+						
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+								<article style="width: 900px; font-size: 18px;">
+
+									<h2>Cardio Health Tracker</h2>
+									<span class="image main"><img src="images/Picture7.svg" alt="" style="width: 900px;"/></span>
+									<br>
+									<br>
+									
+									
+
+									
+									<p>Tracking cardiovascular health data, such as blood pressure, pulse, and body weight (or BMI), is crucial for the early detection and prevention of cardiovascular diseases. 
+										These metrics provide valuable insights into an individual's overall health and help identify potential risk factors. By tracking and analyzing these cardiovascular health data points over time,
+										individuals can make informed decisions about their lifestyle choices, diet, exercise, and seek appropriate medical interventions if necessary. 
+										This proactive approach promotes better cardiovascular health and overall well-being.</p>
+										
+									<h3>Personal Health Monitoring System</h3>
+
+									<p>This report predominantly tracks blood pressure, heart rate, and body weight over time, analyzes deviations, and detects trends. 
+										It consists of three pages. 
+										The <b>first page</b> shows the blood pressure for a specific period (14, 30, 60, 90 days). 
+										Target thresholds can be set, and two bar graphs indicate the difference compared to the thresholds. 
+										Red indicates values above the threshold, allowing easy identification of instances where the threshold is exceeded.
+									</p>
+									<p>The <b>second page</b> provides a more detailed view of blood pressure. If data is available, it allows examination of blood pressure variance in the morning, during the day, and in the evening.</p>
+									<p>The <b>third page</b> presents the data in a more scientific manner. The goal is to detect trends in blood pressure (mean arterial pressure - MAP), body weight (BMI), and pulse.</p>
+									
+									
+									<h3>Development Process</h3>
+									<a href="https://github.com/markjschwarz/Cardio-Health-Tracker/blob/main/cardiotracker_v1r.ipynb" class="icon brands fa-github" style="font-size: 20px;"> Github repository of this project</a>
+									
+									<p><b>Data collection & Preparation:</b> The dataset is based entirely on my private data. Blood pressure and pulse data are collected using a blood pressure monitor and automatically uploaded to the manufacturer's (Beurer) website. The data is available for download in .csv format. Body weight data is collected using a smart scale/app but registered manually since there is no option to download the dataset.</p>
+									<span class="image main"><img src="images/process_cardio2.svg" alt="" style="width: 900px;"/></span>	
+									<p><b>Data Modeling & Analysis :</b> The datasets are in a consistent format. To analyze them, I first transformed them using Python and saved them to .csv format. Then, I loaded the data into Power BI using Power Query, resulting in the following data model.</p>
+									<span class="image main"><img src="images/CHtr_datamodel.jpg" alt="" style="width: 700px;"/></span>
+									<h3>Here are a few examples from the development process</h3>
+									<p>For the bodyweight data, For the body weight data, I used Python (Pandas) to extract and rename the columns and saved them to a CSV file. 
+										The blood pressure data required refinement to categorize the blood pressure reading times into three intervals: 
+										morning (2:00 – 10:00), day (10:00 – 18:00), and night (18:00 – 2:00, next day). I solved this using Python – see Github repository. The time of day screenshot provides more details.</p>
+									<span class="image main"><img src="images/cardio_tod.jpg" alt="" style="width: 700px;"/></span>
+									<p>Further data restructuring was done using Power Query, including pivoting, calculated columns, renaming, and setting the proper data type formats.</p>
+									<p>The data can be visualized for the last 2 weeks, 30 days, 60 days, and 90 days. The DAX code:</p>
+									<span class="image main"><img src="images/cardio_dateper.jpg" alt="" style="width: 373px; height: 563px;"/></span>
+									
+									<h3>Results and Impact</h3>
+									<li>Blood pressure, heart rate, and body weight can be tracked for 14, 30, 60, and 90-day periods.</li>
+									<li>Mean Arterial Pressure (MAP) and BMI (Body Mass Index) data are also tracked, and trends can be detected.</li>
+									<li>Morning, daytime, and nighttime blood pressure analysis is available.</li>
+									<li>The system can be useful for personal and professional purposes.</li>
+										
+								
+									<h3>Limitations and Possible Further Development</h3>
+									
+									
+									<ul>
+										<li>Power BI has become so powerful lately that this entire project could be done using it alone, especially with Azure/Fabric.</li>
+										<li>The data model could be improved and modified to be more efficient.</li>
+										<li>The current version supports only one user, but more users could be added.</li>
+										<li>Tracking can be expanded to include blood sugar data as well.</li>
+										<li>The final product could be a comprehensive health tracker shareable with physicians.</li>
+									</ul>
+
+							
+
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

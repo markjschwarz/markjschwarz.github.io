@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mark's Data Analytics Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Mark's Portfolio</a></h1>
+								<span style="font-size: 35px;">
+									<a href="https://www.linkedin.com/in/markjschwarz/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+									
+									<a href="https://github.com/markjschwarz" class="icon brands fa-github"><span class="label">GitHub</span></a>
+							</span>
+							</div>
+
+						<!-- Nav -->
+						
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div id="content">
+
+							<!-- Content -->
+								<article style="width: 900px; font-size: 18px;">
+
+									<h2>Restaurant Business Analysis</h2>
+									<span class="image main"><img src="images/yelp_rest.svg" alt="" style="width: 900px;"/></span>
+									<br>
+									<br>
+									
+									
+									<h1>OVERVIEW - PROBLEM STATEMENT</h1>
+									<p>Yelp is an online platform and mobile app that allows users to discover and review local businesses such as restaurants, hotels, and service providers. It provides a platform for people to share their experiences, rate businesses, and write reviews. Yelp also offers features like business information, photos, menus, and user-generated content to help users make informed decisions about where to go or what services to use. The platform has a significant influence on businesses, as positive or negative reviews can impact their reputation and success.</p>
+									<p>This project is based on the <a href="https://www.yelp.com/dataset">Yelp Open Dataset</a> which has been uploaded to PostgreSQL database for analysis ( <a href="yelpdb.html">Yelp Open Dataset Transformation project</a>).</p>
+									<p>This data analysis project aims to explore the Yelp dataset for restaurant businesses to identify key factors influencing customer satisfaction and business success, utilizing metrics such as star ratings, review counts, sentiment analysis, and other relevant variables, with the goal of providing actionable insights for restaurant owners and managers to enhance their operations and drive competitive advantage in the industry.</p>
+									
+
+									<h3>Development Process</h3>
+									<a href="https://github.com/markjschwarz/Yelp-Restaurant" class="icon brands fa-github" style="font-size: 20px;"> Github repository of this project</a>
+
+									<span class="image main"><img src="images/process_yelprest.svg" alt="" style="width: 900px"/></span>
+									<p><b>Data collection & Preparation:</b> The data for this project was obtained from the previously created PostgreSQL database. The dataset has been significantly narrowed down, including only four US states and businesses categorized as restaurants. The Users table has been excluded. To accomplish this, I wrote Python code to execute queries, create tables, and export them as CSV files.</p>
+									<p>The SQL queries for the final tables were developed using pgAdmin4 and DBeaver tools. Subsequently, a Python code was utilized to generate CSV files for Power BI analysis.</p>
+									<p>For sentiment analysis, another Python code runs queries, compiles the results into a table, and saves it as a CSV file. The sentiment analysis is based on a predefined list.</p>
+									<span class="image main"><img src="images/sentiments.jpg" alt="" style="width: 472px"/></span>
+									<p><b>Data Analysis and Modeling:</b> The datasets are further transformed using Power Query/Power BI. The data model for this project can be found here: </p>
+									<span class="image main"><img src="images/ERD_yelprt.jpg" alt="" style="width: 900px"/></span>
+									<h3>Visualization</h3>
+									<p>I conducted preliminary analyses using Pandas/Python. For instance, I examined the correlation between the Number of Checkins and the number of reviews. The correlation coefficient was calculated as 0.6836066984992777. </p>
+									<span class="image main"><img src="images/output1.png" alt="" style="width: 580px"/></span>
+									<p>...</p>
+									<span class="image main"><img src="images/yelprest.jpg" alt="" style="width: 900px"/></span>
+
+									
+							
+								
+
+							
+
+								</article>
+
+						</div>
+					</div>
+				</div>
+
+			
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
